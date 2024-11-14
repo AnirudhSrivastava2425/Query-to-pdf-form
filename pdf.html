@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF template</title>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        font-family: sans-serif;
+    }
+
+    .header {
+        background-color: #ECECEC;
+        padding: 24px 48px 16px;
+        border-bottom: 1px solid #545454;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .header>img {
+        height: 64px;
+    }
+
+    .header>span {
+        font-size: 30px;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+
+    .userDetails {
+        width: 100%;
+        margin-top: 16px;
+        border-top: 1px solid #545454;
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .userInfo {
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: fit-content;
+    }
+
+    .entry-para {
+        padding: 24px 0 16px;
+        font-size: 18px;
+        line-height: 32px;
+        margin: 0 48px;
+        border-bottom: 1px solid #545454;
+    }
+
+    .about-mobility {
+        padding: 24px 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .our-brands {
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+    }
+
+    .brandInfo {
+        width: 30%;
+        display: flex;
+        gap: 12px;
+    }
+
+    .about1c {
+        padding: 32px 0px;
+        margin: 24px 48px;
+        border-bottom: 1px solid #545454;
+        border-top: 1px solid #545454;
+    }
+
+    .tiles-1c {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        /* gap: 24px; */
+    }
+
+    .advantages1c {
+        padding: 0px 48px;
+        gap: 24px;
+    }
+
+    .new {
+        gap: 24px;
+    }
+
+    .our-offerings {
+        margin: 24px 0;
+    }
+    .manufacturers{
+        padding: 24px 0px;
+        margin: 0 48px;
+        border-bottom: 1px solid #545454;
+    }
+    .img-manufacturers{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .dynamic-table{
+        padding: 24px 0 48px;
+        margin: 24px 48px;
+        border-bottom: 1px solid #545454;
+    }
+    .dynamic-table table{
+        width: 100%;
+    }
+    table th{
+        background-color: #ececec;
+        padding: 12px 20px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    table td{
+       padding: 12px 20px; 
+       text-align: center;
+       font-size: 18px;
+    }
+   
+</style>
+
+<body>
+    
+    <div class="header">
+        <img src="./images/1.png" alt="1C">
+        <span>Commercial Proposal for Starting an<br><span style="color:#e50000">EV Charging Station</span> under 1C
+            Franchise</span>
+        <div class="userDetails">
+            <div class="userInfo">
+                <span>Client Name:<span style="color: #545454;">Mr. {{username}}</span></span>
+                <span>Client Mobile:<span style="color: #545454;"> {{date}}</span></span>
+                <span>Client Email:<span style="color: #545454;"> {{refID}}</span></span>
+            </div>
+            <div class="userInfo">
+                <span>Contact</span>
+                <span><img src="./images/3.png" width="18px" alt=""> <span style="color: #545454;">
+                        95994-43291</span></span>
+                <span><img src="./images/2.png" height="18px" alt=""> <span style="color: #545454;">
+                        queries@1charging.com
+
+                    </span></span>
+
+            </div>
+        </div>
+    </div>
+    <div class="entry-para">
+        Hi {{username}}
+        <br><br>
+        Warm greetings from the 1C team! We sincerely appreciate your interest in the 1C EV charging station franchise.
+        Attached is
+        our commercial proposal, which not only outlines the details of the EV chargers you've selected but also
+        highlights the
+        exciting benefits you’ll enjoy as a franchise partner. Additionally, it covers the next steps in the process to
+        help you get started
+        with ease.
+        <br><br>
+        If you have any questions or need further clarification, feel free to reach out. We're here to support you at
+        every stage!
+        <br><br>
+        Regards,
+        <br>
+        Team 1C
+    </div>
+    <div class="about-mobility">
+        <h2>About <span style="color:#e50000">Massive Mobility</span> <img src="./images/4.png" width="40px"
+                style="margin-bottom: -5px;"></h2>
+        <span style="font-size: 18px; line-height: 32px;">Massive Mobility is a leading Energy-tech company formed in
+            2019, which is revolutionising the EV charging
+            landscape with its comprehensive solutions. </span>
+        <h2>Our Brands</h2>
+        <div class="our-brands">
+            <div class="brandInfo">
+                <img src="./images/1.png" width="52px" alt="">
+                <span>At 1C EV Charging, we are committed
+                    to developing India’s largest and
+                    most affordable smart EV charging
+                    network.
+                </span>
+            </div>
+            <div class="brandInfo">
+                <img src="./images/4.png" width="52px" alt="">
+                <span>Zecat offers you the unique opportunity
+                    to take home the EV of your choice with
+                    incredible lease and loan options.
+                </span>
+            </div>
+            <div class="brandInfo">
+                <img src="./images/5.png" width="52px" alt="">
+                <span>Bhamo.in is a multi-brand online
+                    marketplace for both used and
+                    new EV 3-wheelers.
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="about-mobility about1c">
+        <h2>Business Verticals <span style="color:#e50000"> - 1Charging</span></h2>
+        <span style="font-size: 18px; line-height: 32px;">At 1C EV Charging, we are committed to developing India’s
+            largest and most affordable smart EV charging network. By
+            leveraging our expertise in both software and hardware, our vision is to become the foremost leader in EV
+            charging
+            solutions in India. </span>
+        <div class="our-brands">
+            <div class="tiles-1c">
+                <img src="./images/7.png" width="172px" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+            <div class="tiles-1c">
+                <img src="./images/8.png" width="172px" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+            <div class="tiles-1c">
+                <img src="./images/9.png" width="172px" height="auto" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+            <div class="tiles-1c">
+                <img src="./images/10.png" width="102px" height="172px" style="object-fit: contain;" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+            <div class="tiles-1c">
+                <img src="./images/1.png" width="102px" height="172px" style="object-fit: contain;" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="about-mobility advantages1c">
+        <h2>Advantages of Choosing <span style="color:#e50000"> 1Charging</span></h2>
+
+        <div class="our-brands">
+            <div class="tiles-1c new">
+                <img src="./images/11.png" width="102px" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+            <div class="tiles-1c new">
+                <img src="./images/12.png" width="102px" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+            <div class="tiles-1c new">
+                <img src="./images/13.png" width="102px" height="auto" style="object-fit: cover;" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+            <div class="tiles-1c new">
+                <img src="./images/14.png" width="102px" height="auto" style="object-fit: cover;" alt="">
+                <span>CMS and Mobile Application</span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="about-mobility our-offerings">
+        <h2>Our <span style="color:#e50000"> Offerings</span></h2>
+        <br>
+        <h3>Go App Less with UPI</h3>
+        <br>
+        Allow your customers to charge their Electric Vehicles without the need of any specialized EV charging app.
+        Customers
+        can pay and charge their EVs with UPI. Attract customers outside of your ecosystem and increase your earnings by
+        moving beyond the limitations of EV charging mobile applications.
+        
+    </div>
+   
+    <div class="manufacturers">
+        <h2>Range of Chargers from <span style="color:#e50000">World Class</span> CP Manufacturers.</h2>
+        <div class="img-manufacturers">
+            <img src="./images/15.png" width="94px" alt="">
+            <img src="./images/16.png" width="94px" alt="">
+            <img src="./images/17.png" width="94px" alt="">
+            <img src="./images/18.png" width="94px" alt="">
+            <img src="./images/19.png" width="94px" alt="">
+            <img src="./images/20.png" width="94px" alt="">
+            <img src="./images/21.png" width="94px" alt="">
+            <span>& Many More...</span>
+        </div>
+    </div>
+    <div class="dynamic-table">
+        <h2><span style="color:#e50000">Less Charger Prices</span> Just for You!!</h2>
+        <br>
+        <table>
+            <tr>
+                <th>S.No.</th>
+                <th>Equipment<br>Name</th>
+                <th>Other Details</th>
+                <th>Unit Price<br>(in INR)</th>
+                <th>Discount Price<br>(in INR)</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Massive Mobility</td>
+                <td>220V(AC)</td>
+                <td>₹ 35,200</td>
+                <td>₹ 29,600</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

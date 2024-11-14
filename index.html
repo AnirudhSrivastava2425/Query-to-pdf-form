@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="testing" class="queryForm " method="post" onsubmit="return handleSubmit(event)">
+
+        <!-- CONTACT DETAILS -->
+        <div class="contactDetails">
+            <h2 class="form-headings">Contact Details</h2>
+            <label for="fname">Name</label>
+            <input type="text" name="fname" id="fname" placeholder="Enter your full name here">
+            <label for="mobile">Mobile</label>
+            <input type="text" placeholder="Enter your number here" name="mobile" id="mobile"
+                oninput="handleNumberVerify(this)" maxlength="10">
+            <span class="numericalWarning">⁕ Please enter a valid mobile number (without +91)</span>
+            <label for="emailID">Email</label>
+            <input type="email" placeholder="Enter your email here" name="email" id="emailID"
+                onblur="handleEmailVerify(this)">
+            <span class="emailWarning">⁕ Please enter a valid email address.</span>
+        </div>
+        <div class="stationDetails">
+            <h2 class="form-headings">Station Location details</h2>
+            <label for="state">State</label>
+            <input type="text" name="state" id="state" placeholder="Enter your state.">
+            <label for="city">City</label>
+            <input type="text" placeholder="Enter your city." name="city" id="city">
+
+        </div>
+
+        <!-- SELECTING CHARGER TYPE AND CHARGERS SECTION -->
+         <!-- Vehicle type selection -->
+        <div class="vehicleDetailsSection">
+            <h2 class="form-headings-2">Location Type</h2>
+            <div class="target-vehicle">
+                <div class="locationType" onclick="toggleLocationType(this)">
+                    <input type="checkbox" name="locationType" value="restaurant">
+                    <span class="checkboxSpan">Restaurant</span>
+                    <!-- <img src="./3W.png" alt=""> -->
+
+                </div>
+                <div class="locationType" onclick="toggleLocationType(this)">
+                    <input type="checkbox" name="locationType" value="highway">
+                    <span class="checkboxSpan">Highway</span>
+                    <!-- <img src="./4W.png" alt=""> -->
+                </div>
+                <div class="locationType" 
+                onclick="toggleLocationType(this)">
+                    <input type="checkbox" name="locationType" value="mall">
+                    <span class="checkboxSpan">Mall</span>
+                    <!-- <img src="./allW.png" alt=""> -->
+                </div>
+                <div class="locationType" 
+                onclick="toggleLocationType(this)">
+                    <input type="checkbox" name="locationType" value="not yet decided">
+                    <span class="checkboxSpan">Not Yet Decided</span>
+                    <!-- <img src="./allW.png" alt=""> -->
+                </div>
+            </div>
+        </div>
+        <!-- Target Vehicle section -->
+        <div class="vehicleDetailsSection">
+            <h2 class="form-headings-2">Target Vehicles</h2>
+            <div class="target-vehicle">
+                <div class="vehicleType" onclick="vehicleTypeCheckbox(this)">
+                    <input type="checkbox" name="vehicleType" value="2/3">
+                    <!-- <img src="./3W.png" alt=""> -->
+                    <span class="checkboxSpan">2/3 Wheelers</span>
+                </div>
+                <div class="vehicleType" onclick="vehicleTypeCheckbox(this)">
+                    <input type="checkbox" name="vehicleType" value="4">
+                    <!-- <img src="./4W.png" alt=""> -->
+                    <span class="checkboxSpan">4 Wheelers</span>
+                </div>
+                <div class="vehicleType" onclick="vehicleTypeCheckbox(this)">
+                    <input type="checkbox" name="vehicleType" value="all">
+                    <!-- <img src="./allW.png" alt=""> -->
+                    <span class="checkboxSpan">All Vehicles</span>
+                </div>
+            </div>
+            <div id="charger-cards-holder"></div>
+        </div>
+
+        <input id="generatePDF" type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
+
+<!-- <script></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+ <script src="./script.js"></script>

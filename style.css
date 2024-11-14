@@ -1,0 +1,194 @@
+.queryForm{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.form-headings{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    line-height: 32px;
+    font-size: 24px;
+    margin: 0px 0px !important;
+    border-bottom: 1px solid #DDDDDD;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+/* Contact Details */
+.contactDetails, .stationDetails,.vehicleDetailsSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0px !important;
+}
+.contactDetails > label, .stationDetails>label, .form-headings-2{
+    margin-top: 16px;
+    font-family: 'Qanelas', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #2F2F2F;
+}
+.contactDetails > input, .stationDetails>input{
+    width: 530px;
+    height: 50px;
+    border-radius: 4px;
+    font-family: 'Qanelas', sans-serif;
+    background-color: #fff;
+    padding-left: 16px;
+    border: 1px solid #1C1C1C80;
+    outline: none;
+}
+.numericalWarning, .emailWarning{
+    color: #e50000;
+    font-family: 'Qanelas', sans-serif;
+    font-size: 12px;
+    display: none;
+}
+
+
+/* Charger type and chargers section */
+.charger-card{
+    background-color: white;
+    box-shadow: #1C1C1C26 0px 2px 4px 0px;
+    padding: 16px;
+    display: flex;
+    border-radius: 8px;
+    gap: 16px;
+    align-items: flex-start;
+    max-width: fit-content;
+    min-width: 650px;
+    border: 1px solid transparent;
+    margin: 24px 0;
+}
+.charger-img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.charger-card:hover{
+    cursor: pointer;
+}
+.charger-details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.charger-details>h3, .charger-details>span{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    color: #0c0c0c;
+}
+.tabular-display{
+    display: flex;
+    gap: 24px;
+}
+.clm{
+    display: flex;
+    flex-direction: column;
+}
+.clm span{
+    font-family: 'Qanelas', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #1c1c1c;
+}
+.clm-heading{
+    font-family: 'Qanelas', sans-serif;
+    font-size: 14px  !important;
+    line-height: 16px !important;
+    font-weight: 400 !important;
+    color: #2f2f2f !important;
+}
+.charging-time{
+    padding: 12px;
+    margin-left: 16px;
+    background-color: #0279001A;
+    border-radius: 4px;
+    min-width: 200px;
+}
+.time{
+    font-family: "Montserrat";
+    color: #027900;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 4px 0;
+}
+.approx{
+    font-size: 12px !important;
+}
+.hour-glass{
+    position: relative;
+    float: right;   
+}
+input[type="checkbox"]{
+    display: none;
+}
+.checked {
+    border: 1px solid #007A48;
+    background-color: #0279000a; /* Change background color when checked */
+}
+.target-vehicle{
+    display: flex;
+    gap: 12px;
+}
+.locationType span, .vehicleType span{
+    font-family: 'Qanelas', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+}
+.vehicleType,.locationType{
+    width: 120px;
+    height: 96px;
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #fcfcfc;
+    border: 1px solid #00000080;
+    color: #2F2F2F;
+    transition: 0.2s;
+}
+.vehicleType:hover, .locationType:hover{
+    cursor: pointer;
+}
+.inverseFilter{
+    background-color: #292D33;
+    color: white;
+}
+input[type='submit']{
+    background-color: #292D33;
+    color: #fcfcfc;
+    border: 1px solid #292D33;
+    border-radius: 4px;
+    outline: none;
+    height: 44px;
+    width: 120px;
+    font-family: 'Qanelas', sans-serif;
+    font-size: 16px;
+    transition: 0.2s;
+}
+input[type='submit']:hover{
+    background-color: #fcfcfc;
+    color: #292D33;
+    cursor: pointer;
+}
+#charger-cards-holder{
+    max-height: 740px !important;
+    overflow-y: auto;
+}
+
+#charger-cards-holder::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+}
+#charger-cards-holder::-webkit-scrollbar-track {
+    background: #0279000a; /* Background of the track */
+}
